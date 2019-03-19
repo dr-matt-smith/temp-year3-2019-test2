@@ -7,17 +7,16 @@ use Symfony\Component\Routing\Annotation\Route;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
-
-class AdminController extends AbstractController
+class AccountsController extends AbstractController
 {
     /**
-     * @Route("/admin", name="admin")
-     * @IsGranted("ROLE_ADMIN")
+     * @Route("/accounts", name="accounts")
+     * @IsGranted("ROLE_ACCOUNTS")
      */
     public function index()
     {
-        return $this->render('admin/index.html.twig', [
-            'controller_name' => 'AdminController',
+        return $this->render('accounts/index.html.twig', [
+            'controller_name' => 'AccountsController',
         ]);
     }
 }
